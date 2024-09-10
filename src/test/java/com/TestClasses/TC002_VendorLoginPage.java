@@ -1,5 +1,8 @@
 package com.TestClasses;
 
+import java.io.IOException;
+
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.BaseClass.BaseClass;
@@ -8,25 +11,31 @@ import com.pages.PreLoginPage;
 
 public class TC002_VendorLoginPage extends BaseClass{
 	
+	@BeforeClass
+	public void openBrowser() throws IOException {
+		getDriver(getCellValue("TestData", 1, 0));
+		maximizeWindow();
+		implicitWait(10);
+	
+		
+		enterAppInUrl(getCellValue("TestData", 1, 1));
+	}
+	
 	@Test
-	public void loginVendor() throws InterruptedException {
+	public void vendorLogin() throws IOException {
 		
 		PreLoginPage pl = new PreLoginPage(driver);
-		pl.clickVendorLoginbtn();
+		pl.vendorLogin();
 		
 		LoginPage lp = new LoginPage(driver);
-		lp.setEmailId("loprautrewoubo-4208@yopmail.com");
-		lp.setPswd("Test@123");
-		//lp.clickSubmitbtn();
+		lp.performLogin(getCellValue("Testdata", 2,3), getCellValue("Testdata", 2,4));
 		
-		//lp.clickForgetPassworslink();
-		//lp.clickGooglebtn();
-		Thread.sleep(2000);
-		lp.clickRegisternowLink();
-		Thread.sleep(5000);
 		
 		
 		
 	}
+	
+	
+	
 
 }
