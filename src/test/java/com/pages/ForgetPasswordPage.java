@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ForgetPasswordPage {
+import com.BaseClass.BaseClass;
+
+public class ForgetPasswordPage extends BaseClass {
 
 	WebDriver driver;
 
@@ -20,21 +22,21 @@ public class ForgetPasswordPage {
 
 	@FindBy(xpath = "//button[text()='Send Link']")
 	WebElement sendlinkbtn;
-	
+
 	@FindBy(xpath = "//a[text()='Go Back to Login']")
 	WebElement goBackLoginbtn;
-	
-	
-	public void enterEmail(String userEmail) {
-		emailId.sendKeys(userEmail);
+
+	public WebElement getEmailId() {
+		return emailId;
+	}
+
+	public WebElement getSendlinkbtn() {
+		return sendlinkbtn;
+	}
+
+	public WebElement getGoBackLoginbtn() {
+		return goBackLoginbtn;
 	}
 	
-	public void clickSendLink() {
-		sendlinkbtn.click();
-	}
-	
-	public void clickgoBackLoginbtn() {
-		goBackLoginbtn.click();
-	}
 
 }

@@ -5,8 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+import com.BaseClass.BaseClass;
 
+public class LoginPage extends BaseClass {
 	WebDriver driver;
 
 	public LoginPage(WebDriver driver) {
@@ -16,55 +17,62 @@ public class LoginPage {
 	}
 
 	@FindBy(id = "Email Address")
-	WebElement emailId;
+	private WebElement emailId;
 
 	@FindBy(id = "Password")
-	WebElement pswd;
+	private WebElement pswd;
 
 	@FindBy(xpath = "//a[text()='Forgot Password?']")
-	WebElement forgetPassworslink;
+	private WebElement forgetPassworslink;
 
 	@FindBy(xpath = "//button[text()='Submit']")
-	WebElement submitbtn;
+	private WebElement submitbtn;
 
 	@FindBy(xpath = "//button[@class='btn btn-outline-secondary me-5 align-items-center']")
-	WebElement googlebtn;
+	private WebElement googlebtn;
 
 	@FindBy(xpath = "//button[@class='btn btn-outline-secondary']")
-	WebElement facebookbtn;
+	private WebElement facebookbtn;
 
 	@FindBy(xpath = "//a[text()='Register Now']")
-	WebElement registernowLink;
+	private WebElement registernowLink;
 
-	public void setEmailId(String email) {
-		emailId.sendKeys(email);
-
+	public WebElement getEmailId() {
+		return emailId;
 	}
 
-	public void setPswd(String pwd) {
-		pswd.sendKeys(pwd);
-
+	public WebElement getPswd() {
+		return pswd;
 	}
 
-	public void clickForgetPassworslink() {
-		forgetPassworslink.click();
-
+	public WebElement getForgetPassworslink() {
+		return forgetPassworslink;
 	}
 
-	public void clickSubmitbtn() {
-		submitbtn.click();
+	public WebElement getSubmitbtn() {
+		return submitbtn;
 	}
 
-	public void clickGooglebtn() {
-		googlebtn.click();
+	public WebElement getGooglebtn() {
+		return googlebtn;
 	}
 
-	public void clickFacebookbtn() {
-		facebookbtn.click();
+	public WebElement getFacebookbtn() {
+		return facebookbtn;
 	}
 
-	public void clickRegisternowLink() {
-		registernowLink.click();
+	public WebElement getRegisternowLink() {
+		return registernowLink;
+	}
+	
+	public void performLogin(String username, String password) {
+		elementSendKeys(getEmailId(), username);
+		elementSendKeys(getPswd(), password);
+		elementClick(getSubmitbtn());
+	}
+
+	public void performForgetPassworslink() {
+		elementClick(getForgetPassworslink());
 	}
 
 }
