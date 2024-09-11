@@ -13,12 +13,12 @@ public class TC002_VendorLoginPage extends BaseClass{
 	
 	@BeforeClass
 	public void openBrowser() throws IOException {
-		getDriver(getCellValue("TestData", 1, 0));
+		getDriver(getCellValue("TestData", 2, 1));
 		maximizeWindow();
 		implicitWait(10);
 	
 		
-		enterAppInUrl(getCellValue("TestData", 1, 1));
+		enterAppInUrl(getCellValue("TestData", 3, 1));
 	}
 	
 	@Test
@@ -28,7 +28,7 @@ public class TC002_VendorLoginPage extends BaseClass{
 		pl.vendorLogin();
 		
 		LoginPage lp = new LoginPage(driver);
-		lp.performLogin(getCellValue("Testdata", 2,3), getCellValue("Testdata", 2,4));
+		lp.performLogin(getCellValue("Testdata", 0,1), getCellValue("Testdata", 1,1));
 		
 		
 		

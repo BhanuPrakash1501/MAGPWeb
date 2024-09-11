@@ -1,57 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-05T10:16:09 IST" name="Suite" finished-at="2024-09-05T10:16:09 IST" duration-ms="119">
+  <suite started-at="2024-09-11T17:18:03 IST" name="Default suite" finished-at="2024-09-11T17:18:07 IST" duration-ms="4086">
     <groups>
     </groups>
-    <test started-at="2024-09-05T10:16:09 IST" name="Test" finished-at="2024-09-05T10:16:09 IST" duration-ms="119">
-      <class name="com.TestClasses.TC005_StaffLogin">
-        <test-method signature="signIn()[pri:0, instance:com.TestClasses.TC005_StaffLogin@7c729a55]" started-at="2024-09-05T10:16:09 IST" name="signIn" finished-at="2024-09-05T10:16:09 IST" duration-ms="55" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy10.click(Unknown Source)
-at com.pages.PreLoginPage.clickStaffLoginbtn(PreLoginPage.java:34)
-at com.TestClasses.TC005_StaffLogin.signIn(TC005_StaffLogin.java:17)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+    <test started-at="2024-09-11T17:18:03 IST" name="Default test" finished-at="2024-09-11T17:18:07 IST" duration-ms="4086">
+      <class name="com.TestClasses.TC002_VendorLoginPage">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.TestClasses.TC002_VendorLoginPage@63376bed]" started-at="2024-09-11T17:18:03 IST" name="openBrowser" finished-at="2024-09-11T17:18:07 IST" duration-ms="3358" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signIn -->
-      </class> <!-- com.TestClasses.TC005_StaffLogin -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- openBrowser -->
+        <test-method signature="vendorLogin()[pri:0, instance:com.TestClasses.TC002_VendorLoginPage@63376bed]" started-at="2024-09-11T17:18:07 IST" name="vendorLogin" finished-at="2024-09-11T17:18:07 IST" duration-ms="677" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- vendorLogin -->
+      </class> <!-- com.TestClasses.TC002_VendorLoginPage -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

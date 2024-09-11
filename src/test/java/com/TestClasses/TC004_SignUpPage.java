@@ -22,11 +22,11 @@ public class TC004_SignUpPage extends BaseClass {
 
 	@BeforeClass
 	public void openBrowser() throws IOException {
-		getDriver(getCellValue("TestData", 1, 0));
+		getDriver(getCellValue("TestData", 2, 1));
 		maximizeWindow();
 		implicitWait(10);
 
-		enterAppInUrl(getCellValue("TestData", 1, 1));
+		enterAppInUrl(getCellValue("TestData", 3, 1));
 	}
 
 	@Test

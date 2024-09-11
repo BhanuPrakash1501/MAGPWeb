@@ -341,7 +341,7 @@ public class BaseClass {
 	public String getCellValue(String sheetName, int rowNum, int cellNum) throws IOException {
 		String res = "";
 
-		File file = new File("C:\\Users\\SAM\\eclipse-workspace\\FirstSession\\excel\\adactin.xlsx");
+		File file = new File("C:\\MAGPWeb\\MAGPWeb\\excel\\TestData.xlsx");
 		// File file = new
 		// File("C:\\Users\\SAM\\eclipse-workspace\\FirstSession\\excel\\facebook.xlsx");
 		FileInputStream stream = new FileInputStream(file);
@@ -388,7 +388,7 @@ public class BaseClass {
 	public void updateCellData(String sheetName, int rowNum, int cellNum, String oldData, String newData)
 			throws IOException {
 
-		File file = new File("C:\\Users\\SAM\\eclipse-workspace\\FirstSession\\excel\\adactin.xlsx");
+		File file = new File("C:\\MAGPWeb\\MAGPWeb\\excel\\TestData.xlsx");
 		// File file = new
 		// File("C:\\Users\\SAM\\eclipse-workspace\\FirstSession\\excel\\facebook.xlsx");
 		FileInputStream stream = new FileInputStream(file);
