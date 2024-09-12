@@ -9,22 +9,20 @@ import com.BaseClass.BaseClass;
 
 public class ForgetPasswordPage extends BaseClass {
 
-	WebDriver driver;
+	public ForgetPasswordPage() {
 
-	public ForgetPasswordPage(WebDriver driver) {
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 
 	}
 
 	@FindBy(id = "Email")
-	WebElement emailId;
+	private WebElement emailId;
 
 	@FindBy(xpath = "//button[text()='Send Link']")
-	WebElement sendlinkbtn;
+	private WebElement sendlinkbtn;
 
 	@FindBy(xpath = "//a[text()='Go Back to Login']")
-	WebElement goBackLoginbtn;
+	private WebElement goBackLoginbtn;
 
 	public WebElement getEmailId() {
 		return emailId;
@@ -37,6 +35,6 @@ public class ForgetPasswordPage extends BaseClass {
 	public WebElement getGoBackLoginbtn() {
 		return goBackLoginbtn;
 	}
-	
 
+	
 }

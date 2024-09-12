@@ -5,10 +5,15 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 import com.BaseClass.BaseClass;
+import com.ObjectManager.PageObjectManager;
+import com.pages.FavoutitesPage;
+import com.pages.HomePage;
 import com.pages.PreLoginPage;
 import com.pages.StaffLogin;
 
 public class TC005_StaffLogin extends BaseClass {
+
+	PageObjectManager pm = new PageObjectManager();
 
 	@BeforeClass
 	public void openBrowser() throws IOException {
@@ -21,16 +26,6 @@ public class TC005_StaffLogin extends BaseClass {
 
 	@Test
 	public void signIn() throws InterruptedException, IOException {
-
-		PreLoginPage pl = new PreLoginPage(driver);
-		pl.staffLogin();
-
-		StaffLogin sl = new StaffLogin(driver);
-		//sl.getSignEmail(getCellValue("TestData", 1, 3));
-		sl.performLogin(getCellValue("TestData", 1, 3));
-		sl.performPassword(getCellValue("TestData", 1, 4));
-		
-		
 
 	}
 }

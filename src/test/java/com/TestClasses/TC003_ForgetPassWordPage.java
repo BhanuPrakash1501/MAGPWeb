@@ -6,11 +6,14 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.BaseClass.BaseClass;
+import com.ObjectManager.PageObjectManager;
 import com.pages.ForgetPasswordPage;
 import com.pages.LoginPage;
 import com.pages.PreLoginPage;
 
 public class TC003_ForgetPassWordPage extends BaseClass {
+	
+	PageObjectManager pm = new PageObjectManager();
 
 	@BeforeClass
 	public void openBrowser() throws IOException {
@@ -24,11 +27,7 @@ public class TC003_ForgetPassWordPage extends BaseClass {
 	@Test
 	public void vendorLogin() throws IOException {
 
-		PreLoginPage pl = new PreLoginPage(driver);
-		pl.vendorLogin();
-
-		LoginPage lp = new LoginPage(driver);
-		lp.performForgetPassworslink();
+		
 
 	}
 

@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-11T17:18:03 IST" name="Default suite" finished-at="2024-09-11T17:18:07 IST" duration-ms="4086">
+  <suite started-at="2024-09-12T14:08:08 IST" name="Default suite" finished-at="2024-09-12T14:08:13 IST" duration-ms="5019">
     <groups>
     </groups>
-    <test started-at="2024-09-11T17:18:03 IST" name="Default test" finished-at="2024-09-11T17:18:07 IST" duration-ms="4086">
-      <class name="com.TestClasses.TC002_VendorLoginPage">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.TestClasses.TC002_VendorLoginPage@63376bed]" started-at="2024-09-11T17:18:03 IST" name="openBrowser" finished-at="2024-09-11T17:18:07 IST" duration-ms="3358" status="PASS">
+    <test started-at="2024-09-12T14:08:08 IST" name="Default test" finished-at="2024-09-12T14:08:13 IST" duration-ms="5019">
+      <class name="com.TestClasses.TC001_PreLoginScreen">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.TestClasses.TC001_PreLoginScreen@d86a6f]" started-at="2024-09-12T14:08:08 IST" name="openBrowser" finished-at="2024-09-12T14:08:11 IST" duration-ms="3846" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="vendorLogin()[pri:0, instance:com.TestClasses.TC002_VendorLoginPage@63376bed]" started-at="2024-09-11T17:18:07 IST" name="vendorLogin" finished-at="2024-09-11T17:18:07 IST" duration-ms="677" status="PASS">
+        <test-method signature="checkLoginScreen()[pri:0, instance:com.TestClasses.TC001_PreLoginScreen@d86a6f]" started-at="2024-09-12T14:08:11 IST" name="checkLoginScreen" finished-at="2024-09-12T14:08:13 IST" duration-ms="1126" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- vendorLogin -->
-      </class> <!-- com.TestClasses.TC002_VendorLoginPage -->
+        </test-method> <!-- checkLoginScreen -->
+      </class> <!-- com.TestClasses.TC001_PreLoginScreen -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

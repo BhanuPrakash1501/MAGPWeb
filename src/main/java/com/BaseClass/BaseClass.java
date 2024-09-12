@@ -103,7 +103,7 @@ public class BaseClass {
 	 */
 	public String getPropertFileValue(String key) throws FileNotFoundException, IOException {
 		Properties properties = new Properties();
-		properties.load(new FileInputStream(projectPath() + "\\config\\config.properties"));
+		properties.load(new FileInputStream(projectPath() + "C:/MAGPWeb/MAGPWeb/config.properties"));
 		Object object = properties.get(key);
 		String value = (String) object;
 		// String value = object.toString();
@@ -462,4 +462,10 @@ public class BaseClass {
 		Alert al = driver.switchTo().alert();
 		al.sendKeys(text);
 	}
+	
+	public static void scrollToElement(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+        
+    }
 }

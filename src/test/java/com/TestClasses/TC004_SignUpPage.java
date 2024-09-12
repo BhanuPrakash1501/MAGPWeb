@@ -13,12 +13,14 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.BaseClass.BaseClass;
+import com.ObjectManager.PageObjectManager;
 import com.pages.LoginPage;
 import com.pages.PreLoginPage;
 import com.pages.SignUpPage;
 
 public class TC004_SignUpPage extends BaseClass {
-	
+
+	PageObjectManager pm = new PageObjectManager();
 
 	@BeforeClass
 	public void openBrowser() throws IOException {

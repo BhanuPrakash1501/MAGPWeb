@@ -9,11 +9,10 @@ import com.BaseClass.BaseClass;
 
 public class PreLoginPage extends BaseClass {
 
-	WebDriver driver;
+	// WebDriver driver;
 
-	public PreLoginPage(WebDriver driver) {
+	public PreLoginPage() {
 
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 
 	}

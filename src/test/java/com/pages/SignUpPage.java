@@ -5,92 +5,88 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SignUpPage {
+import com.BaseClass.BaseClass;
 
-	WebDriver driver;
+public class SignUpPage extends BaseClass {
 
-	public SignUpPage(WebDriver driver) {
+	public SignUpPage() {
 
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 
 	}
 
 	@FindBy(id = "Email")
-	WebElement enterEmailId;
+	private WebElement enterEmailId;
 
 	@FindBy(id = "Mobile Number")
-	WebElement MobileNo;
+	private WebElement MobileNo;
 
 	@FindBy(id = "Password")
-	WebElement pwd;
+	private WebElement pwd;
 
 	@FindBy(id = "First Name")
-	WebElement firstName;
+	private WebElement firstName;
 
 	@FindBy(id = "Last Name")
-	WebElement lastName;
+	private WebElement lastName;
 
 	@FindBy(id = "Apartment, Suite, Building...")
-	WebElement aptsuitebldg;
+	private WebElement aptsuitebldg;
 
 	@FindBy(id = "Street City and Address")
-	WebElement streetcityadd;
+	private WebElement streetcityadd;
 
 	@FindBy(id = "Postcode")
-	WebElement postcode;
+	private WebElement postcode;
 
 	@FindBy(xpath = "//button[text()='Submit']")
-	WebElement submitbtn;
+	private WebElement submitbtn;
 
 	@FindBy(xpath = "//a[text()='Login Here']")
-	WebElement loginhereLink;
+	private WebElement loginhereLink;
 
-	public void setEmailId(String email) {
-		enterEmailId.sendKeys(email);
-
+	public WebDriver getDriver() {
+		return driver;
 	}
 
-	public void setPswd(String passwd) {
-		pwd.sendKeys(passwd);
-
+	public WebElement getEnterEmailId() {
+		return enterEmailId;
 	}
 
-	public void setMobileNo(String mbNo) {
-		MobileNo.sendKeys(mbNo);
-
+	public WebElement getMobileNo() {
+		return MobileNo;
 	}
 
-	public void setFirstName(String fName) {
-		firstName.sendKeys(fName);
-
+	public WebElement getPwd() {
+		return pwd;
 	}
 
-	public void setLastName(String lName) {
-		lastName.sendKeys(lName);
-
-	}
-	
-	public void setAptBldSuite(String aptSuiteBldg) {
-		aptsuitebldg.sendKeys(aptSuiteBldg);
-
-	}
-	
-	public void setStreetCityAddress(String streetCtyAddrss) {
-		streetcityadd.sendKeys(streetCtyAddrss);
-
-	}
-	
-	public void setPostCode(String pstCode) {
-		postcode.sendKeys(pstCode);
-
-	}
-	public void clickSubmitbtn() {
-		submitbtn.click();
+	public WebElement getFirstName() {
+		return firstName;
 	}
 
-	public void clickloginhereLink() {
-		loginhereLink.click();
+	public WebElement getLastName() {
+		return lastName;
+	}
+
+	public WebElement getAptsuitebldg() {
+		return aptsuitebldg;
+	}
+
+	public WebElement getStreetcityadd() {
+		return streetcityadd;
+	}
+
+	public WebElement getPostcode() {
+		return postcode;
+	}
+
+	public WebElement getSubmitbtn() {
+		return submitbtn;
+	}
+
+	public WebElement getLoginhereLink() {
+		return loginhereLink;
 	}
 
 }

@@ -9,58 +9,112 @@ import com.BaseClass.BaseClass;
 
 public class ProfilePage extends BaseClass {
 
-	WebDriver driver;
+	public ProfilePage() {
 
-	public ProfilePage(WebDriver driver) {
-
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 
 	}
-	
+
 	@FindBy(xpath = "//button[normalize-space()='Edit Profile']")
-	WebElement editProfilebtn;
-	
+	private WebElement editProfilebtn;
+
 	@FindBy(xpath = "//img[@class='img-close']")
-	WebElement crossbtn;
-	
+	private WebElement crossbtn;
+
 	@FindBy(xpath = "//input[@id='Mobile Number']")
-	WebElement mobileNo;
-	
+	private WebElement mobileNo;
+
 	@FindBy(xpath = "//input[@id='Apartment, Suite, Building...']")
-	WebElement aptstibldg;
-	
+	private WebElement aptstibldg;
+
 	@FindBy(xpath = "//input[@id='Street City and Address']")
-	WebElement strCtyAdd;
-	
+	private WebElement strCtyAdd;
+
 	@FindBy(xpath = "//input[@id='Postcode']")
-	WebElement postCodeTxtBox;
-	
+	private WebElement postCodeTxtBox;
+
 	@FindBy(xpath = "//button[normalize-space()='Save']")
-	WebElement savebtn;
-	
+	private WebElement savebtn;
+
 	@FindBy(xpath = "//span[normalize-space()='Introduction, Preface']")
-	WebElement introductionprefacelnk;
-	
+	private WebElement introductionprefacelnk;
+
 	@FindBy(xpath = "//span[normalize-space()='Calendar, Events']")
-	WebElement calendarEventsLink;
-	
+	private WebElement calendarEventsLink;
+
 	@FindBy(xpath = "//img[@class='icon-lg me-3']")
-	WebElement backbtn;
-	
+	private WebElement backbtn;
+
 	@FindBy(xpath = "//p[@class='error']")
-	WebElement logoutbtn;
-	
+	private WebElement logoutbtn;
+
 	@FindBy(xpath = "//img[@class='img-close']")
-	WebElement crosspopupbtn;
-	
+	private WebElement crosspopupbtn;
+
 	@FindBy(xpath = "//button[normalize-space()='No, Keep Login']")
-	WebElement nokeepLoginbtn;
-	
-	
+	private WebElement nokeepLoginbtn;
+
 	@FindBy(xpath = "//button[normalize-space()='Yes, Logout']")
-	WebElement yesLogoutbtn;
-	
-	
+	private WebElement yesLogoutbtn;
+
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+	public WebElement getEditProfilebtn() {
+		return editProfilebtn;
+	}
+
+	public WebElement getCrossbtn() {
+		return crossbtn;
+	}
+
+	public WebElement getMobileNo() {
+		return mobileNo;
+	}
+
+	public WebElement getAptstibldg() {
+		return aptstibldg;
+	}
+
+	public WebElement getStrCtyAdd() {
+		return strCtyAdd;
+	}
+
+	public WebElement getPostCodeTxtBox() {
+		return postCodeTxtBox;
+	}
+
+	public WebElement getSavebtn() {
+		return savebtn;
+	}
+
+	public WebElement getIntroductionprefacelnk() {
+		return introductionprefacelnk;
+	}
+
+	public WebElement getCalendarEventsLink() {
+		return calendarEventsLink;
+	}
+
+	public WebElement getBackbtn() {
+		return backbtn;
+	}
+
+	public WebElement getLogoutbtn() {
+		return logoutbtn;
+	}
+
+	public WebElement getCrosspopupbtn() {
+		return crosspopupbtn;
+	}
+
+	public WebElement getNokeepLoginbtn() {
+		return nokeepLoginbtn;
+	}
+
+	public WebElement getYesLogoutbtn() {
+		return yesLogoutbtn;
+	}
 
 }

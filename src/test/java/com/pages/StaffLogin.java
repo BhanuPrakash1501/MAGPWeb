@@ -9,11 +9,7 @@ import com.BaseClass.BaseClass;
 
 public class StaffLogin extends BaseClass {
 
-	WebDriver driver;
-
-	public StaffLogin(WebDriver driver) {
-
-		this.driver = driver;
+	public StaffLogin() {
 		PageFactory.initElements(driver, this);
 
 	}
@@ -37,40 +33,20 @@ public class StaffLogin extends BaseClass {
 		return signEmail;
 	}
 
-	public void setSignEmail(WebElement signEmail) {
-		this.signEmail = signEmail;
-	}
-
 	public WebElement getNextbtn() {
 		return nextbtn;
-	}
-
-	public void setNextbtn(WebElement nextbtn) {
-		this.nextbtn = nextbtn;
 	}
 
 	public WebElement getPdwbtn() {
 		return pdwbtn;
 	}
 
-	public void setPdwbtn(WebElement pdwbtn) {
-		this.pdwbtn = pdwbtn;
-	}
-
 	public WebElement getSignInbtn() {
 		return signInbtn;
 	}
 
-	public void setSignInbtn(WebElement signInbtn) {
-		this.signInbtn = signInbtn;
-	}
-
 	public WebElement getNobtn() {
 		return nobtn;
-	}
-
-	public void setNobtn(WebElement nobtn) {
-		this.nobtn = nobtn;
 	}
 
 	public void performLogin(String username) {
@@ -89,20 +65,4 @@ public class StaffLogin extends BaseClass {
 
 }
 
-// TODO Auto-generated method stub
 
-/*
- * public void setEmailId(String email) { signEmail.sendKeys(email);
- * 
- * }
- * 
- * public void setPswd(String pwd) { pdwbtn.sendKeys(pwd);
- * 
- * }
- * 
- * public void clickNextbtn() { nextbtn.click(); }
- * 
- * public void clickSignbtn() { signInbtn.click(); }
- * 
- * public void clickNobtn() { nobtn.click(); }
- */

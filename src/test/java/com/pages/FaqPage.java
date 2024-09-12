@@ -1,22 +1,26 @@
 package com.pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FaqPage {
+import com.BaseClass.BaseClass;
 
-	WebDriver driver;
+public class FaqPage extends BaseClass {
 
-	public FaqPage(WebDriver driver) {
+	public FaqPage() {
 
-		this.driver = driver;
 		PageFactory.initElements(driver, this);
 
 	}
 
 	@FindBy(xpath = "//input[@placeholder='Search']")
-	WebElement staffLoginbtn;
+	private WebElement searchBar;
+
+	public WebElement getSearchBar() {
+		return searchBar;
+	}
+
+	
 
 }
