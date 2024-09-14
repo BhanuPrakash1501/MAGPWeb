@@ -53,6 +53,46 @@ public class SignUpPage extends BaseClass {
 		return enterEmailId;
 	}
 
+	public void setEnterEmailId(WebElement enterEmailId) {
+		this.enterEmailId = enterEmailId;
+	}
+
+	public void setMobileNo(WebElement mobileNo) {
+		MobileNo = mobileNo;
+	}
+
+	public void setPwd(WebElement pwd) {
+		this.pwd = pwd;
+	}
+
+	public void setFirstName(WebElement firstName) {
+		this.firstName = firstName;
+	}
+
+	public void setLastName(WebElement lastName) {
+		this.lastName = lastName;
+	}
+
+	public void setAptsuitebldg(WebElement aptsuitebldg) {
+		this.aptsuitebldg = aptsuitebldg;
+	}
+
+	public void setStreetcityadd(WebElement streetcityadd) {
+		this.streetcityadd = streetcityadd;
+	}
+
+	public void setPostcode(WebElement postcode) {
+		this.postcode = postcode;
+	}
+
+	public void setSubmitbtn(WebElement submitbtn) {
+		this.submitbtn = submitbtn;
+	}
+
+	public void setLoginhereLink(WebElement loginhereLink) {
+		this.loginhereLink = loginhereLink;
+	}
+
 	public WebElement getMobileNo() {
 		return MobileNo;
 	}

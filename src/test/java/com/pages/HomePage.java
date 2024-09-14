@@ -148,6 +148,22 @@ public class HomePage extends BaseClass {
 
 	@FindBy(xpath = "//p[normalize-space()='Vendor Management']")
 	private WebElement vendorMgntlnk;
+	
+	@FindBy(xpath = "//button[normalize-space()='Login']")
+	private WebElement loginbtn;
+	
+	@FindBy(xpath = "//img[@class='img-close']")
+	private WebElement crossbtn;
+	
+	@FindBy(xpath = "//h2[normalize-space()='MAHB Contact Directory']")
+	private WebElement mahbContactDirectorylnk;
+	
+	@FindBy(xpath = "//h2[normalize-space()='Procurehere Login']")
+	private WebElement procurehereLoginlnk;
+	
+	@FindBy(xpath = "//h2[normalize-space()='Vendor Management System']")
+	private WebElement vendorManagementSystemlnk;
+	
 
 	public WebElement getHome() {
 		return home;

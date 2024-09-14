@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-12T14:08:08 IST" name="Default suite" finished-at="2024-09-12T14:08:13 IST" duration-ms="5019">
+  <suite started-at="2024-09-13T11:30:48 IST" name="Default suite" finished-at="2024-09-13T11:30:53 IST" duration-ms="5606">
     <groups>
     </groups>
-    <test started-at="2024-09-12T14:08:08 IST" name="Default test" finished-at="2024-09-12T14:08:13 IST" duration-ms="5019">
+    <test started-at="2024-09-13T11:30:48 IST" name="Default test" finished-at="2024-09-13T11:30:53 IST" duration-ms="5606">
       <class name="com.TestClasses.TC001_PreLoginScreen">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.TestClasses.TC001_PreLoginScreen@d86a6f]" started-at="2024-09-12T14:08:08 IST" name="openBrowser" finished-at="2024-09-12T14:08:11 IST" duration-ms="3846" status="PASS">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.TestClasses.TC001_PreLoginScreen@d86a6f]" started-at="2024-09-13T11:30:48 IST" name="openBrowser" finished-at="2024-09-13T11:30:52 IST" duration-ms="4328" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="checkLoginScreen()[pri:0, instance:com.TestClasses.TC001_PreLoginScreen@d86a6f]" started-at="2024-09-12T14:08:11 IST" name="checkLoginScreen" finished-at="2024-09-12T14:08:13 IST" duration-ms="1126" status="PASS">
+        <test-method signature="checkLoginScreen()[pri:0, instance:com.TestClasses.TC001_PreLoginScreen@d86a6f]" started-at="2024-09-13T11:30:52 IST" name="checkLoginScreen" finished-at="2024-09-13T11:30:53 IST" duration-ms="1218" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLoginScreen -->

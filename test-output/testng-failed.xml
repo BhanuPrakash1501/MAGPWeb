@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestClasses.TC005_StaffLogin">
+      <class name="com.TestClasses.TC001_PreLoginScreen">
         <methods>
           <include name="openBrowser"/>
-          <include name="signIn"/>
+          <include name="checkLoginScreen"/>
         </methods>
-      </class> <!-- com.TestClasses.TC005_StaffLogin -->
+      </class> <!-- com.TestClasses.TC001_PreLoginScreen -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

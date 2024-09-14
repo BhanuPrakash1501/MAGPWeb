@@ -3,6 +3,7 @@ package com.TestClasses;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -28,10 +29,8 @@ public class TC001_PreLoginScreen extends BaseClass {
 
 	@Test
 	public void checkLoginScreen() throws InterruptedException {
-		
-		pm.getPreLogin().guestLogin();
 
-		
+		pm.getPreLogin().guestLogin();
 
 	}
 
