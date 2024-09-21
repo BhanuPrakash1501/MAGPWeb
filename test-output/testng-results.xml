@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-21T14:31:33 IST" name="Default suite" finished-at="2024-09-21T14:31:58 IST" duration-ms="24960">
+  <suite started-at="2024-09-21T17:23:23 IST" name="Default suite" finished-at="2024-09-21T17:23:30 IST" duration-ms="6878">
     <groups>
     </groups>
-    <test started-at="2024-09-21T14:31:33 IST" name="Default test" finished-at="2024-09-21T14:31:58 IST" duration-ms="24960">
-      <class name="com.TestClasses.TC002_VendorLoginPage">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.TestClasses.TC002_VendorLoginPage@46cdf8bd]" started-at="2024-09-21T14:31:33 IST" name="openBrowser" finished-at="2024-09-21T14:31:38 IST" duration-ms="4283" status="PASS">
+    <test started-at="2024-09-21T17:23:23 IST" name="Default test" finished-at="2024-09-21T17:23:30 IST" duration-ms="6878">
+      <class name="com.TestClasses.TC004_SignUpPage">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.TestClasses.TC004_SignUpPage@2a7f1f10]" started-at="2024-09-21T17:23:23 IST" name="openBrowser" finished-at="2024-09-21T17:23:27 IST" duration-ms="4362" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="vendorLogin()[pri:1, instance:com.TestClasses.TC002_VendorLoginPage@46cdf8bd]" started-at="2024-09-21T14:31:38 IST" name="vendorLogin" finished-at="2024-09-21T14:31:58 IST" duration-ms="20620" status="PASS">
+        <test-method signature="registerNowUIValidations()[pri:0, instance:com.TestClasses.TC004_SignUpPage@2a7f1f10]" started-at="2024-09-21T17:23:27 IST" name="registerNowUIValidations" finished-at="2024-09-21T17:23:28 IST" duration-ms="900" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- vendorLogin -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.TestClasses.TC002_VendorLoginPage@46cdf8bd]" started-at="2024-09-21T14:31:58 IST" name="closeBrowser" finished-at="2024-09-21T14:31:58 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- registerNowUIValidations -->
+        <test-method signature="signUpFieldValidations()[pri:2, instance:com.TestClasses.TC004_SignUpPage@2a7f1f10]" started-at="2024-09-21T17:23:28 IST" name="signUpFieldValidations" finished-at="2024-09-21T17:23:30 IST" duration-ms="1555" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpFieldValidations -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.TestClasses.TC004_SignUpPage@2a7f1f10]" started-at="2024-09-21T17:23:30 IST" name="closeBrowser" finished-at="2024-09-21T17:23:30 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.TestClasses.TC002_VendorLoginPage -->
+      </class> <!-- com.TestClasses.TC004_SignUpPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

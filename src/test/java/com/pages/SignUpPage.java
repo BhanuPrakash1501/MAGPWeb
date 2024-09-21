@@ -1,9 +1,9 @@
 package com.pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.BaseClass.BaseClass;
 
@@ -45,52 +45,91 @@ public class SignUpPage extends BaseClass {
 	@FindBy(xpath = "//a[text()='Login Here']")
 	private WebElement loginhereLink;
 
-	public WebDriver getDriver() {
-		return driver;
+	@FindBy(xpath = "//h2[text()='Signup']")
+	private WebElement signUpHeaderTxt;
+
+	@FindBy(xpath = "//*[text()='Email *']")
+	private WebElement emailadressTxt;
+
+	@FindBy(xpath = "//*[text()='Mobile Number *']")
+	private WebElement mobileNoTxt;
+
+	@FindBy(xpath = "//*[text()='Password *']")
+	private WebElement passwordTxt;
+
+	@FindBy(xpath = "//*[text()='First Name *']")
+	private WebElement firstNameTxt;
+
+	@FindBy(xpath = "//*[text()='Last Name *']")
+	private WebElement lastNameTxt;
+
+	@FindBy(xpath = "//*[text()='Apartment, Suite, Building... *']")
+	private WebElement aptSuitebuildingTxt;
+
+	@FindBy(xpath = "//*[text()='Street City and Address *']")
+	private WebElement streetCityaddressTxt;
+
+	@FindBy(xpath = "//*[text()='Postcode *']")
+	private WebElement postcodeTxt;
+
+	@FindBy(xpath = "//div[text()='Please enter a valid email address']")
+	private WebElement emailAdressErrorMssgTxt;
+
+	@FindBy(xpath = "//div[text()='Please enter a valid 4-16 digit mobile number']")
+	private WebElement mobileNoErrorMssgTxt;
+
+	@FindBy(xpath = "//div[text()='Password must be at least 8 characters long.']")
+	private WebElement password8charslongErrorMssgTxt;
+
+	@FindBy(xpath = "//div[text()='Password must contain at least one uppercase letter.']")
+	private WebElement passwordUpperCaseErrorMssgTxt;
+
+	@FindBy(xpath = "//div[text()='Password must contain at least one number.']")
+	private WebElement atLeastOneNumberErrorMssgTxt;
+
+	@FindBy(xpath = "//div[text()='Password must contain at least one special character.']")
+	private WebElement atLeastOneSpecialcharErrorMssgTxt;
+
+	@FindBy(xpath = "//div[text()='This field must be at least 2 characters long']")
+	private WebElement fieldCharLengthErrorMssgTxt;
+
+	@FindBy(xpath = "//div[text()='Please enter a valid 4-6 pincode']")
+	private WebElement postCodeErrorMssgTxt;
+
+	public WebElement getEmailAdressErrorMssgTxt() {
+		return emailAdressErrorMssgTxt;
+	}
+
+	public WebElement getMobileNoErrorMssgTxt() {
+		return mobileNoErrorMssgTxt;
+	}
+
+	public WebElement getPassword8charslongErrorMssgTxt() {
+		return password8charslongErrorMssgTxt;
+	}
+
+	public WebElement getPasswordUpperCaseErrorMssgTxt() {
+		return passwordUpperCaseErrorMssgTxt;
+	}
+
+	public WebElement getAtLeastOneNumberErrorMssgTxt() {
+		return atLeastOneNumberErrorMssgTxt;
+	}
+
+	public WebElement getAtLeastOneSpecialcharErrorMssgTxt() {
+		return atLeastOneSpecialcharErrorMssgTxt;
+	}
+
+	public WebElement getFieldCharLengthErrorMssgTxt() {
+		return fieldCharLengthErrorMssgTxt;
+	}
+
+	public WebElement getPostCodeErrorMssgTxt() {
+		return postCodeErrorMssgTxt;
 	}
 
 	public WebElement getEnterEmailId() {
 		return enterEmailId;
-	}
-
-	public void setEnterEmailId(WebElement enterEmailId) {
-		this.enterEmailId = enterEmailId;
-	}
-
-	public void setMobileNo(WebElement mobileNo) {
-		MobileNo = mobileNo;
-	}
-
-	public void setPwd(WebElement pwd) {
-		this.pwd = pwd;
-	}
-
-	public void setFirstName(WebElement firstName) {
-		this.firstName = firstName;
-	}
-
-	public void setLastName(WebElement lastName) {
-		this.lastName = lastName;
-	}
-
-	public void setAptsuitebldg(WebElement aptsuitebldg) {
-		this.aptsuitebldg = aptsuitebldg;
-	}
-
-	public void setStreetcityadd(WebElement streetcityadd) {
-		this.streetcityadd = streetcityadd;
-	}
-
-	public void setPostcode(WebElement postcode) {
-		this.postcode = postcode;
-	}
-
-	public void setSubmitbtn(WebElement submitbtn) {
-		this.submitbtn = submitbtn;
-	}
-
-	public void setLoginhereLink(WebElement loginhereLink) {
-		this.loginhereLink = loginhereLink;
 	}
 
 	public WebElement getMobileNo() {
@@ -128,5 +167,131 @@ public class SignUpPage extends BaseClass {
 	public WebElement getLoginhereLink() {
 		return loginhereLink;
 	}
+
+	public WebElement getSignUpHeaderTxt() {
+		return signUpHeaderTxt;
+	}
+
+	public WebElement getEmailadressTxt() {
+		return emailadressTxt;
+	}
+
+	public WebElement getMobileNoTxt() {
+		return mobileNoTxt;
+	}
+
+	public WebElement getPasswordTxt() {
+		return passwordTxt;
+	}
+
+	public WebElement getFirstNameTxt() {
+		return firstNameTxt;
+	}
+
+	public WebElement getLastNameTxt() {
+		return lastNameTxt;
+	}
+
+	public WebElement getAptSuitebuildingTxt() {
+		return aptSuitebuildingTxt;
+	}
+
+	public WebElement getStreetCityaddressTxt() {
+		return streetCityaddressTxt;
+	}
+
+	public WebElement getPostcodeTxt() {
+		return postcodeTxt;
+	}
+
+	public void verifySignUpHeaderTxt() {
+		String signuptxt = getSignUpHeaderTxt().getText();
+		Assert.assertEquals(signuptxt, "Signup");
+	}
+
+	public void verifyemailHeaderTxt() {
+		String emailtxt = getEmailadressTxt().getText();
+		Assert.assertEquals(emailtxt, "Email *");
+	}
+
+	public void verifymobileNoHeaderTxt() {
+		String mobileNotxt = getMobileNoTxt().getText();
+		Assert.assertEquals(mobileNotxt, "Mobile Number *");
+	}
+
+	public void verifyfirstNameHeaderTxt() {
+		String firstNametxt = getFirstNameTxt().getText();
+		Assert.assertEquals(firstNametxt, "First Name *");
+	}
+
+	public void verifypasswordHeaderTxt() {
+		String passwordtxt = getPasswordTxt().getText();
+		Assert.assertEquals(passwordtxt, "Password *");
+	}
+
+	public void verifylastNameHeaderTxt() {
+		String lastNametxt = getLastNameTxt().getText();
+		Assert.assertEquals(lastNametxt, "Last Name *");
+	}
+
+	public void verifyaptSuiteBuildingHeaderTxt() {
+		scrollInsideSignUpPopup();
+		String aptSuiteBuildingtxt = getAptSuitebuildingTxt().getText();
+		Assert.assertEquals(aptSuiteBuildingtxt, "Apartment, Suite, Building... *");
+	}
+
+	public void verifystreetCityAddressHeaderTxt() {
+		String streetCityAddresstxt = getStreetCityaddressTxt().getText();
+		Assert.assertEquals(streetCityAddresstxt, "Street City and Address *");
+	}
+
+	public void verifypostCodeHeaderTxt() {
+		String postCodetxt = getPostcodeTxt().getText();
+		Assert.assertEquals(postCodetxt, "Postcode *");
+	}
+
+	public void performEmailValidations(String email) {
+		scrollToElement(enterEmailId);
+//		elementClear(getEnterEmailId());
+		elementSendKeys(enterEmailId, email);
+		String emailErrortxt = getEmailAdressErrorMssgTxt().getText();
+		Assert.assertEquals(emailErrortxt, "Please enter a valid email address");
+
+	}
+
+	public void performMobileNoValidation(String mobileNo) {
+		elementSendKeys(getMobileNo(), mobileNo);
+		String mobileNoErrortxt = getMobileNoErrorMssgTxt().getText();
+		Assert.assertEquals(mobileNoErrortxt, "Please enter a valid 4-16 digit mobile number");
+
+	}
+
+	public void performPassword8CharsValidation(String ps) {
+		elementSendKeys(getPwd(), ps);
+		String pass8charsLongErrortxt = getPassword8charslongErrorMssgTxt().getText();
+		Assert.assertEquals(pass8charsLongErrortxt, "Password must be at least 8 characters long.");
+
+	}
+
+	public void performPasswordUpperCaseValidation(String ps) {
+		elementSendKeys(getPwd(), ps);
+		String passUpperCaseErrortxt = getPasswordUpperCaseErrorMssgTxt().getText();
+		Assert.assertEquals(passUpperCaseErrortxt, "Password must contain at least one uppercase letter.");
+
+	}
+	public void performPasswordSpecialcharValidation() {
+		getPwd().sendKeys("1");
+		String passOneSpecialCharErrortxt = getAtLeastOneSpecialcharErrorMssgTxt().getText();
+		Assert.assertEquals(passOneSpecialCharErrortxt, "Password must contain at least one special character.");
+
+	}
+
+	public void performPasswordOneNumberValidation() {
+		elementSendKeys(getPwd(), "U");
+		String passOneNumberErrortxt = getAtLeastOneNumberErrorMssgTxt().getText();
+		Assert.assertEquals(passOneNumberErrortxt, "Password must contain at least one number.");
+
+	}
+	
 
 }

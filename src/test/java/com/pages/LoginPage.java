@@ -133,8 +133,12 @@ public class LoginPage extends BaseClass {
 		elementClick(getSubmitbtn());
 	}
 
-	public void performForgetPassworslink() {
+	public void clickForgetPassworslink() {
 		elementClick(getForgetPassworslink());
+	}
+	
+	public void clickRegisterNowlink() {
+		elementClick(getRegisternowLink());
 	}
 
 	public void verifyEmailTxt() {
