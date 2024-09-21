@@ -2,20 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-13T11:30:48 IST" name="Default suite" finished-at="2024-09-13T11:30:53 IST" duration-ms="5606">
+  <suite started-at="2024-09-21T14:31:33 IST" name="Default suite" finished-at="2024-09-21T14:31:58 IST" duration-ms="24960">
     <groups>
     </groups>
-    <test started-at="2024-09-13T11:30:48 IST" name="Default test" finished-at="2024-09-13T11:30:53 IST" duration-ms="5606">
-      <class name="com.TestClasses.TC001_PreLoginScreen">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.TestClasses.TC001_PreLoginScreen@d86a6f]" started-at="2024-09-13T11:30:48 IST" name="openBrowser" finished-at="2024-09-13T11:30:52 IST" duration-ms="4328" status="PASS">
+    <test started-at="2024-09-21T14:31:33 IST" name="Default test" finished-at="2024-09-21T14:31:58 IST" duration-ms="24960">
+      <class name="com.TestClasses.TC002_VendorLoginPage">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.TestClasses.TC002_VendorLoginPage@46cdf8bd]" started-at="2024-09-21T14:31:33 IST" name="openBrowser" finished-at="2024-09-21T14:31:38 IST" duration-ms="4283" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="checkLoginScreen()[pri:0, instance:com.TestClasses.TC001_PreLoginScreen@d86a6f]" started-at="2024-09-13T11:30:52 IST" name="checkLoginScreen" finished-at="2024-09-13T11:30:53 IST" duration-ms="1218" status="PASS">
+        <test-method signature="vendorLogin()[pri:1, instance:com.TestClasses.TC002_VendorLoginPage@46cdf8bd]" started-at="2024-09-21T14:31:38 IST" name="vendorLogin" finished-at="2024-09-21T14:31:58 IST" duration-ms="20620" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkLoginScreen -->
-      </class> <!-- com.TestClasses.TC001_PreLoginScreen -->
+        </test-method> <!-- vendorLogin -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.TestClasses.TC002_VendorLoginPage@46cdf8bd]" started-at="2024-09-21T14:31:58 IST" name="closeBrowser" finished-at="2024-09-21T14:31:58 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.TestClasses.TC002_VendorLoginPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

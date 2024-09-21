@@ -26,6 +26,12 @@ public class TC005_StaffLogin extends BaseClass {
 
 	@Test
 	public void signIn() throws InterruptedException, IOException {
+		
+		pm.getPreLogin().staffLogin();
+		pm.getStaffLogin().performLogin(getCellValue("TestData", 0, 2));
+		pm.getStaffLogin().performPassword(getCellValue("TestData", 1, 2));
+		
+		
 
 	}
 }

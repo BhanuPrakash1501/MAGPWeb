@@ -13,6 +13,7 @@ import java.time.Duration;
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
@@ -462,10 +463,33 @@ public class BaseClass {
 		Alert al = driver.switchTo().alert();
 		al.sendKeys(text);
 	}
-	
+
 	public static void scrollToElement(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", element);
-        
-    }
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+
+	}
+
+	public static void scrollPageToDown() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0,document.body.scrollHeight);");
+
+	}
+
+	public void navigateBack() {
+		driver.navigate().back();
+	}
+
+	public void switchToWindow(String window) {
+		driver.switchTo().window(window);
+	}
+
+	public String getWindowHandle() {
+		return driver.getWindowHandle();
+
+	}
+
+	public Set<String> getWindowHandles() {
+		return driver.getWindowHandles();
+	}
 }

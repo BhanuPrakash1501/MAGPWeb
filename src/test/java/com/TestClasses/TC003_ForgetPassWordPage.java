@@ -2,17 +2,15 @@ package com.TestClasses;
 
 import java.io.IOException;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.BaseClass.BaseClass;
 import com.ObjectManager.PageObjectManager;
-import com.pages.ForgetPasswordPage;
-import com.pages.LoginPage;
-import com.pages.PreLoginPage;
 
 public class TC003_ForgetPassWordPage extends BaseClass {
-	
+
 	PageObjectManager pm = new PageObjectManager();
 
 	@BeforeClass
@@ -25,10 +23,20 @@ public class TC003_ForgetPassWordPage extends BaseClass {
 	}
 
 	@Test
-	public void vendorLogin() throws IOException {
+	public void verifyInvalidEmail() throws IOException {
 
-		
+		pm.getPreLogin().vendorLogin();
+		pm.getLogin().verifyForgetPasswordlink();
+		pm.getForgetPasswordPage().verifyForgetPasswordHeadingtxt();
+		pm.getForgetPasswordPage().verifyValidEMailAdressTxt(getCellValue("Testdata", 0, 3));
+		pm.getForgetPasswordPage().verifySendLinkButton();
+		pm.getForgetPasswordPage().verifyGobackToLoginBtn();
+		pm.getLogin().verifyLoginHeaderTxt();
+	}
 
+	@AfterClass
+	public void closeBrowser() {
+		quitWindow();
 	}
 
 }

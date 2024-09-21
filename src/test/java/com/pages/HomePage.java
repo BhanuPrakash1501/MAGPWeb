@@ -1,8 +1,14 @@
 package com.pages;
 
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.BaseClass.BaseClass;
 
@@ -148,22 +154,35 @@ public class HomePage extends BaseClass {
 
 	@FindBy(xpath = "//p[normalize-space()='Vendor Management']")
 	private WebElement vendorMgntlnk;
-	
+
 	@FindBy(xpath = "//button[normalize-space()='Login']")
 	private WebElement loginbtn;
-	
+
 	@FindBy(xpath = "//img[@class='img-close']")
 	private WebElement crossbtn;
-	
+
 	@FindBy(xpath = "//h2[normalize-space()='MAHB Contact Directory']")
 	private WebElement mahbContactDirectorylnk;
-	
+
 	@FindBy(xpath = "//h2[normalize-space()='Procurehere Login']")
 	private WebElement procurehereLoginlnk;
-	
+
 	@FindBy(xpath = "//h2[normalize-space()='Vendor Management System']")
 	private WebElement vendorManagementSystemlnk;
-	
+
+	@FindBy(xpath = "//div[@class='me-4 link-footer d-flex align-items-center']/a")
+	private List<WebElement> links;
+
+	@FindBy(xpath = "//h3[text()='Welcome to MAGP']")
+	private WebElement welcomeToMagpTxt;
+
+	public List<WebElement> getLinks() {
+		return links;
+	}
+
+	public WebElement getWelocmeToMagpTxt() {
+		return welcomeToMagpTxt;
+	}
 
 	public WebElement getHome() {
 		return home;
@@ -343,6 +362,84 @@ public class HomePage extends BaseClass {
 
 	public WebElement getVendorMgntlnk() {
 		return vendorMgntlnk;
+	}
+
+	public WebElement getLoginbtn() {
+		return loginbtn;
+	}
+
+	public WebElement getCrossbtn() {
+		return crossbtn;
+	}
+
+	public WebElement getMahbContactDirectorylnk() {
+		return mahbContactDirectorylnk;
+	}
+
+	public WebElement getProcurehereLoginlnk() {
+		return procurehereLoginlnk;
+	}
+
+	public WebElement getVendorManagementSystemlnk() {
+		return vendorManagementSystemlnk;
+	}
+
+	public void verifyWelcomeToMagpTxt() {
+		elementClick(getCrossbtn());
+		String welcomeToMagpTxt = getWelocmeToMagpTxt().getText();
+		Assert.assertEquals(welcomeToMagpTxt, "Welcome to MAGP");
+
+	}
+
+	public void clickOnLinksAndVerify() throws InterruptedException {
+		Thread.sleep(1000);
+		elementClick(getCrossbtn());
+		Thread.sleep(3000);
+
+		scrollToElement(getMahbContactDirectorylnk());
+		Thread.sleep(1000);
+
+		String pWindow = getWindowHandle();
+
+		elementClick(getMahbContactDirectorylnk());
+		Thread.sleep(2000);
+
+		navigateBack();
+		elementClick(getCrossbtn());
+		scrollPageToDown();
+
+		elementClick(getProcurehereLoginlnk());
+		Thread.sleep(2000);
+		Set<String> windows = getWindowHandles();
+
+		for (String window : windows) {
+
+			if (!window.equals(pWindow)) {
+				switchToWindow(window);
+				System.out.println(getAppTitle());
+
+			}
+
+		}
+		closeWindow();
+		switchToWindow(pWindow);
+		elementClick(getVendorManagementSystemlnk());
+		Thread.sleep(3000);
+		Set<String> handles = getWindowHandles();
+		for (String handle : handles) {
+
+			if (!handle.equals(pWindow)) {
+				switchToWindow(handle);
+				System.out.println(getAppTitle());
+
+			}
+
+		}
+		closeWindow();
+		switchToWindow(pWindow);
+		Thread.sleep(2000);
+		quitWindow();
+
 	}
 
 }

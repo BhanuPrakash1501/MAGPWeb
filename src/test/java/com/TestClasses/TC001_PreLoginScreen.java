@@ -23,8 +23,7 @@ public class TC001_PreLoginScreen extends BaseClass {
 		maximizeWindow();
 		implicitWait(10);
 		enterAppInUrl(getCellValue("TestData", 3, 1));
-		// enterAppInUrl(getPropertFileValue("nonProdurl"));
-		// enterAppInUrl(url);
+		
 	}
 
 	@Test
