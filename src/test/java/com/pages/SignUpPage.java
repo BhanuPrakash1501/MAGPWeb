@@ -1,6 +1,5 @@
 package com.pages;
 
-import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -324,7 +323,6 @@ public class SignUpPage extends BaseClass {
 	}
 
 	public void performpostCodeValidation(String no) {
-
 		elementSendKeys(getPostcode(), no);
 		String postCodeErrortxt = getPostCodeErrorMssgTxt().getText();
 		Assert.assertEquals(postCodeErrortxt, "Please enter a valid 4-6 pincode");
@@ -332,56 +330,46 @@ public class SignUpPage extends BaseClass {
 	}
 
 	public void randmEmail() {
-
-		String name = RandomStringUtils.randomAlphabetic(6);
 		getEnterEmailId().clear();
-		getEnterEmailId().sendKeys(name + "@gmail.com");
+		getEnterEmailId().sendKeys(randomString(4) + "@gmail.com");
 
 	}
 
 	public void randomMobileNumbers() {
-		String number = RandomStringUtils.randomNumeric(8);
 		getMobileNo().clear();
-		getMobileNo().sendKeys(number);
+		getMobileNo().sendKeys(randomNumber(9));
 
 	}
 
 	public void randomPassword() {
-		String name = RandomStringUtils.randomAlphabetic(4);
-		String number = RandomStringUtils.randomNumeric(3);
 		getPwd().clear();
-		getPwd().sendKeys(name + "@" + number);
+		getPwd().sendKeys(randomString(4) + "@" + randomNumber(3));
 	}
 
 	public void randomFirstName() {
 		scrollInsideSignUpPopup();
-		String name = RandomStringUtils.randomAlphabetic(4);
 		getFirstName().clear();
-		getFirstName().sendKeys(name);
+		getFirstName().sendKeys(randomString(4));
 	}
 
 	public void randomLastName() {
-		String name = RandomStringUtils.randomAlphabetic(4);
 		getLastName().clear();
-		getLastName().sendKeys(name);
+		getLastName().sendKeys(randomString(4));
 	}
 
 	public void randomAptSuiteBldgName() {
-		String name = RandomStringUtils.randomAlphabetic(5);
 		getAptsuitebldg().clear();
-		getAptsuitebldg().sendKeys(name);
+		getAptsuitebldg().sendKeys(randomString(5));
 	}
 
 	public void randomStreetCityAddressName() {
-		String name = RandomStringUtils.randomAlphabetic(5);
 		getStreetcityadd().clear();
-		getStreetcityadd().sendKeys(name);
+		getStreetcityadd().sendKeys(randomString(5));
 	}
 
 	public void randomPostCode() {
-		String number = RandomStringUtils.randomNumeric(6);
 		getPostcode().clear();
-		getPostcode().sendKeys(number);
+		getPostcode().sendKeys(randomNumber(6));
 	}
 
 }

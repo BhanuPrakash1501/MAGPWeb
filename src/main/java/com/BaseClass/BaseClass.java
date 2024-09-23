@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.DateUtil;
@@ -477,12 +477,12 @@ public class BaseClass {
 		js.executeScript("window.scrollTo(0,document.body.scrollHeight);");
 
 	}
-	
-	public void scrollInsideSignUpPopup(){
+
+	public void scrollInsideSignUpPopup() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("h2")));
-	    js.executeScript("document.querySelector('.signup-box').scrollTop=5000");
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("h2")));
+		js.executeScript("document.querySelector('.signup-box').scrollTop=5000");
 	}
 
 	public void navigateBack() {
@@ -500,5 +500,21 @@ public class BaseClass {
 
 	public Set<String> getWindowHandles() {
 		return driver.getWindowHandles();
+	}
+
+	public String randomString(int x) {
+		String name = RandomStringUtils.randomAlphabetic(x);
+		return name;
+	}
+
+	public String randomNumber(int y) {
+		String number = RandomStringUtils.randomNumeric(y);
+		return number;
+	}
+
+	public String randomAlphaNumeric(int x, int y) {
+		String name = RandomStringUtils.randomAlphabetic(x);
+		String number = RandomStringUtils.randomNumeric(y);
+		return(name +number);
 	}
 }
