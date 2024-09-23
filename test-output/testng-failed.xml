@@ -6,6 +6,7 @@
       <class name="com.TestClasses.TC004_SignUpPage">
         <methods>
           <include name="openBrowser"/>
+          <include name="enterValuesForSignUP"/>
           <include name="closeBrowser"/>
           <include name="signUpFieldValidations"/>
         </methods>

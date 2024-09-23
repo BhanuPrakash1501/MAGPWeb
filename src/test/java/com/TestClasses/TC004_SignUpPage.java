@@ -1,23 +1,14 @@
 package com.TestClasses;
 
 import java.io.IOException;
-import java.time.Duration;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import com.BaseClass.BaseClass;
 import com.ObjectManager.PageObjectManager;
-import com.pages.LoginPage;
-import com.pages.PreLoginPage;
-import com.pages.SignUpPage;
 
 public class TC004_SignUpPage extends BaseClass {
 
@@ -48,19 +39,41 @@ public class TC004_SignUpPage extends BaseClass {
 
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 1)
 	public void signUpFieldValidations() throws IOException {
-
+//		pm.getPreLogin().vendorLogin();
+//		pm.getLogin().clickRegisterNowlink();
 		pm.getSignUpPage().performEmailValidations(getCellValue("SignUp", 1, 0));
 		pm.getSignUpPage().performMobileNoValidation(getCellValue("SignUP", 1, 1));
 		pm.getSignUpPage().performPassword8CharsValidation(getCellValue("SignUp", 1, 2));
 		pm.getSignUpPage().performPasswordUpperCaseValidation(getCellValue("SignUp", 2, 2));
 		pm.getSignUpPage().performPasswordOneNumberValidation();
 		pm.getSignUpPage().performPasswordSpecialcharValidation();
+		pm.getSignUpPage().performFirstNameValidation(getCellValue("SignUp", 1, 3));
+		pm.getSignUpPage().performlastNameValidation(getCellValue("SignUp", 1, 4));
+		pm.getSignUpPage().performAptSuiteBldgValidation(getCellValue("SignUp", 1, 5));
+		pm.getSignUpPage().performStreetCityAddressValidation(getCellValue("SignUp", 1, 6));
+		pm.getSignUpPage().performpostCodeValidation(getCellValue("SignUp", 1, 7));
+
+	}
+
+	@Test(priority = 2)
+	public void enterValuesForSignUP() {
+//		pm.getPreLogin().vendorLogin();
+//		pm.getLogin().clickRegisterNowlink();
+		pm.getSignUpPage().randmEmail();
+		pm.getSignUpPage().randomMobileNumbers();
+		pm.getSignUpPage().randomPassword();;
+		pm.getSignUpPage().randomFirstName();
+		pm.getSignUpPage().randomLastName();
+		pm.getSignUpPage().randomAptSuiteBldgName();
+		pm.getSignUpPage().randomStreetCityAddressName();
+		pm.getSignUpPage().randomPostCode();
+
 	}
 
 	@AfterClass
 	public void closeBrowser() {
-//		quitWindow();
+		//quitWindow();
 	}
 }

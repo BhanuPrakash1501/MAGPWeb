@@ -1,5 +1,6 @@
 package com.pages;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -252,7 +253,6 @@ public class SignUpPage extends BaseClass {
 
 	public void performEmailValidations(String email) {
 		scrollToElement(enterEmailId);
-//		elementClear(getEnterEmailId());
 		elementSendKeys(enterEmailId, email);
 		String emailErrortxt = getEmailAdressErrorMssgTxt().getText();
 		Assert.assertEquals(emailErrortxt, "Please enter a valid email address");
@@ -279,6 +279,7 @@ public class SignUpPage extends BaseClass {
 		Assert.assertEquals(passUpperCaseErrortxt, "Password must contain at least one uppercase letter.");
 
 	}
+
 	public void performPasswordSpecialcharValidation() {
 		getPwd().sendKeys("1");
 		String passOneSpecialCharErrortxt = getAtLeastOneSpecialcharErrorMssgTxt().getText();
@@ -292,6 +293,95 @@ public class SignUpPage extends BaseClass {
 		Assert.assertEquals(passOneNumberErrortxt, "Password must contain at least one number.");
 
 	}
-	
+
+	public void performFirstNameValidation(String fn) {
+		scrollInsideSignUpPopup();
+		elementSendKeys(getFirstName(), fn);
+		String firstNameErrortxt = getFieldCharLengthErrorMssgTxt().getText();
+		Assert.assertEquals(firstNameErrortxt, "This field must be at least 2 characters long");
+
+	}
+
+	public void performlastNameValidation(String ln) {
+		elementSendKeys(getLastName(), ln);
+		String lastNameErrortxt = getFieldCharLengthErrorMssgTxt().getText();
+		Assert.assertEquals(lastNameErrortxt, "This field must be at least 2 characters long");
+
+	}
+
+	public void performAptSuiteBldgValidation(String aptsutbldg) {
+		elementSendKeys(getAptsuitebldg(), aptsutbldg);
+		String aptSuiteBldgErrortxt = getFieldCharLengthErrorMssgTxt().getText();
+		Assert.assertEquals(aptSuiteBldgErrortxt, "This field must be at least 2 characters long");
+
+	}
+
+	public void performStreetCityAddressValidation(String streetCityAdd) {
+		elementSendKeys(getStreetcityadd(), streetCityAdd);
+		String streetCityAddressBldgErrortxt = getFieldCharLengthErrorMssgTxt().getText();
+		Assert.assertEquals(streetCityAddressBldgErrortxt, "This field must be at least 2 characters long");
+
+	}
+
+	public void performpostCodeValidation(String no) {
+
+		elementSendKeys(getPostcode(), no);
+		String postCodeErrortxt = getPostCodeErrorMssgTxt().getText();
+		Assert.assertEquals(postCodeErrortxt, "Please enter a valid 4-6 pincode");
+
+	}
+
+	public void randmEmail() {
+
+		String name = RandomStringUtils.randomAlphabetic(6);
+		getEnterEmailId().clear();
+		getEnterEmailId().sendKeys(name + "@gmail.com");
+
+	}
+
+	public void randomMobileNumbers() {
+		String number = RandomStringUtils.randomNumeric(8);
+		getMobileNo().clear();
+		getMobileNo().sendKeys(number);
+
+	}
+
+	public void randomPassword() {
+		String name = RandomStringUtils.randomAlphabetic(4);
+		String number = RandomStringUtils.randomNumeric(3);
+		getPwd().clear();
+		getPwd().sendKeys(name + "@" + number);
+	}
+
+	public void randomFirstName() {
+		scrollInsideSignUpPopup();
+		String name = RandomStringUtils.randomAlphabetic(4);
+		getFirstName().clear();
+		getFirstName().sendKeys(name);
+	}
+
+	public void randomLastName() {
+		String name = RandomStringUtils.randomAlphabetic(4);
+		getLastName().clear();
+		getLastName().sendKeys(name);
+	}
+
+	public void randomAptSuiteBldgName() {
+		String name = RandomStringUtils.randomAlphabetic(5);
+		getAptsuitebldg().clear();
+		getAptsuitebldg().sendKeys(name);
+	}
+
+	public void randomStreetCityAddressName() {
+		String name = RandomStringUtils.randomAlphabetic(5);
+		getStreetcityadd().clear();
+		getStreetcityadd().sendKeys(name);
+	}
+
+	public void randomPostCode() {
+		String number = RandomStringUtils.randomNumeric(6);
+		getPostcode().clear();
+		getPostcode().sendKeys(number);
+	}
 
 }
