@@ -96,6 +96,12 @@ public class SignUpPage extends BaseClass {
 	@FindBy(xpath = "//div[text()='Please enter a valid 4-6 pincode']")
 	private WebElement postCodeErrorMssgTxt;
 
+	@FindBy(xpath = "(//img[contains(@class, 'icon')])[1]")
+	private WebElement googleBtn;
+
+	@FindBy(xpath = "(//img[contains(@class, 'icon')])[2]")
+	private WebElement facebookBtn;
+
 	public WebElement getEmailAdressErrorMssgTxt() {
 		return emailAdressErrorMssgTxt;
 	}
@@ -204,6 +210,14 @@ public class SignUpPage extends BaseClass {
 		return postcodeTxt;
 	}
 
+	public WebElement getGoogleBtn() {
+		return googleBtn;
+	}
+
+	public WebElement getFacebookBtn() {
+		return facebookBtn;
+	}
+
 	public void verifySignUpHeaderTxt() {
 		String signuptxt = getSignUpHeaderTxt().getText();
 		Assert.assertEquals(signuptxt, "Signup");
@@ -248,6 +262,22 @@ public class SignUpPage extends BaseClass {
 	public void verifypostCodeHeaderTxt() {
 		String postCodetxt = getPostcodeTxt().getText();
 		Assert.assertEquals(postCodetxt, "Postcode *");
+	}
+
+	public void verifySignUpBtn() {
+		boolean status = getSubmitbtn().isEnabled();
+		Assert.assertFalse(status);
+
+	}
+
+	public void verifyGoogleBtn() {
+		boolean googleIcon = getGoogleBtn().isDisplayed();
+		Assert.assertTrue(googleIcon);
+	}
+
+	public void verifyFacebookBtn() {
+		boolean facebookIcon = getFacebookBtn().isDisplayed();
+		Assert.assertTrue(facebookIcon);
 	}
 
 	public void performEmailValidations(String email) {
@@ -322,7 +352,7 @@ public class SignUpPage extends BaseClass {
 
 	}
 
-	public void performpostCodeValidation(String no) {
+	public void performPostCodeValidation(String no) {
 		elementSendKeys(getPostcode(), no);
 		String postCodeErrortxt = getPostCodeErrorMssgTxt().getText();
 		Assert.assertEquals(postCodeErrortxt, "Please enter a valid 4-6 pincode");
@@ -370,6 +400,17 @@ public class SignUpPage extends BaseClass {
 	public void randomPostCode() {
 		getPostcode().clear();
 		getPostcode().sendKeys(randomNumber(6));
+	}
+
+	public void verifyLoginHereLink() {
+		scrollPageToDown();
+		String loginHereTxt = getLoginhereLink().getText();
+		Assert.assertEquals(loginHereTxt, "Login Here");
+	}
+
+	public void clickLoginHereLink() {
+		elementClick(getLoginhereLink());
+
 	}
 
 }

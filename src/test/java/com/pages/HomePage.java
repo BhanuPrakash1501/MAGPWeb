@@ -60,7 +60,7 @@ public class HomePage extends BaseClass {
 	@FindBy(xpath = "//a[@href='/user/introduction?id=get-vendor-management-list&name=Vendor+Management']")
 	private WebElement vendorMgnt;
 
-	@FindBy(xpath = "//a[normalize-space()='View All']")
+	@FindBy(xpath = "//a[text()='View All']")
 	private WebElement viewAll;
 
 	@FindBy(xpath = "//h2[normalize-space()='Introduction']")
@@ -173,6 +173,52 @@ public class HomePage extends BaseClass {
 
 	@FindBy(xpath = "//h3[text()='Welcome to MAGP']")
 	private WebElement welcomeToMagpTxt;
+	
+	@FindBy(xpath = "//a[text()='Purchase ID']")
+	private WebElement purchaseIDTxt;
+	
+	@FindBy(xpath = "//p[text()='Purchase login ID to access an expanded array of modules and features']")
+	private WebElement purchaseIDPopDescTxt;
+	
+	@FindBy(xpath = "//h2[text()='Latest Announcements']")
+	private WebElement latestAnnouncementsTxt;
+	
+	@FindBy(xpath = "//p[text()='Last 7 days']")
+	private WebElement last7daysTxt;
+	
+	@FindBy(xpath = "//img[@class='logo me-3']")
+	private WebElement malaysiaLogoIcon;
+	
+	@FindBy(xpath = "(//img[contains(@class,'logo-small')])[1]")
+	private WebElement magpLogoIcon;
+
+	public WebElement getLatestAnnouncementsTxt() {
+		return latestAnnouncementsTxt;
+	}
+
+	public WebElement getLast7daysTxt() {
+		return last7daysTxt;
+	}
+
+	public WebElement getMalaysiaLogoIcon() {
+		return malaysiaLogoIcon;
+	}
+
+	public WebElement getMagpLogoIcon() {
+		return magpLogoIcon;
+	}
+
+	public WebElement getWelcomeToMagpTxt() {
+		return welcomeToMagpTxt;
+	}
+
+	public WebElement getPurchaseIDTxt() {
+		return purchaseIDTxt;
+	}
+
+	public WebElement getPurchaseIDPopDescTxt() {
+		return purchaseIDPopDescTxt;
+	}
 
 	public List<WebElement> getLinks() {
 		return links;
@@ -439,5 +485,34 @@ public class HomePage extends BaseClass {
 		quitWindow();
 
 	}
+	
+	public void verifyPurchaseIdTxt() {
+		String purchaseIdTxt = getPurchaseIDTxt().getText();
+		Assert.assertEquals(purchaseIdTxt, "Purchase ID");
+	}
+	
+	public void verifyPurchaseIdDescTxt() {
+		String purchaseIdDescTxt = getPurchaseIDTxt().getText();
+		Assert.assertEquals(purchaseIdDescTxt, "Purchase login ID to access an expanded array of modules and features");
+	}
+	
+	public void verifyLatestAnnouncementTxt() {
+		scrollToElement(getLast7daysTxt());
+		String latestAnnouncementTxt = getLatestAnnouncementsTxt().getText();
+		Assert.assertEquals(latestAnnouncementTxt, "Latest Announcements");
+	}
+	
+	public void verifyLast7DaysTxt() {
+		String last7DaysTxt = getLast7daysTxt().getText();
+		Assert.assertEquals(last7DaysTxt, "Last 7 days");
+	}
+	
+	public void verifyViewAll() {
+		scrollToElement(getViewAll());
+		String viewAllTxt = getViewAll().getText();
+		Assert.assertEquals(viewAllTxt, "View ALL");
+	}
+	
+
 
 }

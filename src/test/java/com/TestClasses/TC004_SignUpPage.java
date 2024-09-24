@@ -21,7 +21,7 @@ public class TC004_SignUpPage extends BaseClass {
 		enterAppInUrl(getCellValue("TestData", 3, 1));
 	}
 
-	@Test
+	@Test(priority = 1)
 	public void registerNowUIValidations() {
 		pm.getPreLogin().vendorLogin();
 		pm.getLogin().clickRegisterNowlink();
@@ -34,10 +34,14 @@ public class TC004_SignUpPage extends BaseClass {
 		pm.getSignUpPage().verifyaptSuiteBuildingHeaderTxt();
 		pm.getSignUpPage().verifystreetCityAddressHeaderTxt();
 		pm.getSignUpPage().verifypostCodeHeaderTxt();
+		pm.getSignUpPage().verifyGoogleBtn();
+		pm.getSignUpPage().verifyFacebookBtn();
+		pm.getSignUpPage().verifyLoginHereLink();
+		
 
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void signUpFieldValidations() throws IOException {
 //		pm.getPreLogin().vendorLogin();
 //		pm.getLogin().clickRegisterNowlink();
@@ -51,27 +55,32 @@ public class TC004_SignUpPage extends BaseClass {
 		pm.getSignUpPage().performlastNameValidation(getCellValue("SignUp", 1, 4));
 		pm.getSignUpPage().performAptSuiteBldgValidation(getCellValue("SignUp", 1, 5));
 		pm.getSignUpPage().performStreetCityAddressValidation(getCellValue("SignUp", 1, 6));
-		pm.getSignUpPage().performpostCodeValidation(getCellValue("SignUp", 1, 7));
+		pm.getSignUpPage().performPostCodeValidation(getCellValue("SignUp", 1, 7));
+		pm.getSignUpPage().verifySignUpBtn();
 
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void enterValuesForSignUP() {
 //		pm.getPreLogin().vendorLogin();
 //		pm.getLogin().clickRegisterNowlink();
 		pm.getSignUpPage().randmEmail();
 		pm.getSignUpPage().randomMobileNumbers();
-		pm.getSignUpPage().randomPassword();;
+		pm.getSignUpPage().randomPassword();
 		pm.getSignUpPage().randomFirstName();
 		pm.getSignUpPage().randomLastName();
 		pm.getSignUpPage().randomAptSuiteBldgName();
 		pm.getSignUpPage().randomStreetCityAddressName();
 		pm.getSignUpPage().randomPostCode();
+		pm.getSignUpPage().clickLoginHereLink();
+		pm.getLogin().verifyLoginHeaderTxt();
 
 	}
 
 	@AfterClass
 	public void closeBrowser() {
-		//quitWindow();
+
+		quitWindow();
+
 	}
 }

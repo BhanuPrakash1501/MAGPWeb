@@ -22,7 +22,7 @@ public class TC002_VendorLoginPage extends BaseClass {
 		enterAppInUrl(getCellValue("TestData", 3, 1));
 	}
 
-	 @Test(priority = 1)
+//	 @Test(priority = 3)
 	public void vendorLogin() throws IOException, InterruptedException {
 
 		pm.getPreLogin().vendorLogin();
@@ -31,7 +31,7 @@ public class TC002_VendorLoginPage extends BaseClass {
 
 	}
 
-//	@Test
+	@Test
 	public void verifyLoginPageUIValidations() {
 		pm.getPreLogin().vendorLogin();
 		pm.getLogin().verifyEmailTxt();
@@ -46,14 +46,14 @@ public class TC002_VendorLoginPage extends BaseClass {
 
 	}
 
-//	@Test(priority = 1)
+	@Test(priority = 2)
 	public void verifyLoginPageWithValidCredentials() throws IOException {
 		pm.getLogin().performLogin(getCellValue("Testdata", 0, 1), getCellValue("Testdata", 1, 1));
 		pm.getHomePage().verifyWelcomeToMagpTxt();
 
 	}
 
-//	@Test
+	@Test(priority = 1)
 	public void verifyLoginPageWithInvalidCredentials() throws IOException {
 		pm.getLogin().verifyInvalidEmail(getCellValue("Testdata", 0, 3));
 
