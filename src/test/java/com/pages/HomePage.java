@@ -3,6 +3,7 @@ package com.pages;
 import java.util.List;
 import java.util.Set;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -41,6 +42,7 @@ public class HomePage extends BaseClass {
 
 	@FindBy(xpath = "//a[@role='button']//img[@src=\"/MAGP/home/p1.png\"]")
 	private WebElement profile;
+	// a[@href="/user/introduction?id=get-introduction-list&name=Introduction"]
 
 	@FindBy(xpath = "//a[contains(@href,'/user/introduction?id=get-introduction-list&name=Introduction')]")
 	private WebElement introduction;
@@ -64,94 +66,94 @@ public class HomePage extends BaseClass {
 	private WebElement viewAll;
 
 	@FindBy(xpath = "//h2[normalize-space()='Introduction']")
-	private WebElement introductionlnk;
+	private WebElement introductionLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Preface']")
-	private WebElement prefacelnk;
+	private WebElement prefaceLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Procurement Codes of Ethics']")
-	private WebElement procurementCodesofEthicslnk;
+	private WebElement procurementCodesofEthicsLink;
 
 	@FindBy(xpath = "//p[normalize-space()='General Provision']")
-	private WebElement generalProvisionlnk;
+	private WebElement generalProvisionLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Terms & Definitions']")
-	private WebElement termsDefinitionslnk;
+	private WebElement termsDefinitionsLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Process Symbols']")
-	private WebElement processSymbolslnk;
+	private WebElement processSymbolsLink;
 
 	@FindBy(xpath = "//p[text()='MAHB’s  Procurement value chain']")
-	private WebElement mAHBsProcurementvaluechainlnk;
+	private WebElement mAHBsProcurementvaluechainLink;
 
 	@FindBy(xpath = "//h2[normalize-space()='Contact Us']")
 	private WebElement contactUsbtn;
 
 	@FindBy(xpath = "//h2[normalize-space()='Procurement Planning']")
-	private WebElement procurementplanninglnk;
+	private WebElement procurementplanningLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Business Case']")
-	private WebElement businessCaselnk;
+	private WebElement businessCaseLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Annual Procurement Planning']")
-	private WebElement annualProcurementPlanninglnk;
+	private WebElement annualProcurementPlanningLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Strategy Paper']")
-	private WebElement strategyPaperlnk;
+	private WebElement strategyPaperLink;
 
 	@FindBy(xpath = "//h2[normalize-space()='Requisition']")
-	private WebElement requisitionlnk;
+	private WebElement requisitionLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Purchase Requisition']")
-	private WebElement purchaseRequisitionlnk;
+	private WebElement purchaseRequisitionLink;
 
 	@FindBy(xpath = "//p[contains(text(),'Process of')]")
-	private WebElement processofPurchaseRequisitionlnk;
+	private WebElement processofPurchaseRequisitionLink;
 
 	@FindBy(xpath = "//h2[normalize-space()='Sourcing']")
-	private WebElement Sourcinglnk;
+	private WebElement SourcingLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Tender Management']")
-	private WebElement tenderManagementlnk;
+	private WebElement tenderManagementLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Tender Administration']")
-	private WebElement tenderAdministrationlnk;
+	private WebElement tenderAdministrationLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Tender Evaluation']")
-	private WebElement tenderEvaluationlnk;
+	private WebElement tenderEvaluationLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Abort of Tender']")
-	private WebElement AbortofTenderlnk;
+	private WebElement AbortofTenderLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Clarification/ Negotiation prior to Award']")
-	private WebElement clarificationNegotiationpriortoAwardlnk;
+	private WebElement clarificationNegotiationpriortoAwardLink;
 
 	@FindBy(xpath = "//h2[normalize-space()='Contract Administration']")
-	private WebElement contractAdministrationlnk;
+	private WebElement contractAdministrationLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Contract Management Implementation']")
-	private WebElement contractManagementImplementationlnk;
+	private WebElement contractManagementImplementationLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Contract Renewal']")
-	private WebElement contractRenewallnk;
+	private WebElement contractRenewalLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Contract Termination']")
-	private WebElement contractTerminationlnk;
+	private WebElement contractTerminationLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Contract Closeout']")
-	private WebElement contractCloseoutlnk;
+	private WebElement contractCloseoutLink;
 
 	@FindBy(xpath = "//h2[normalize-space()='Vendor Management']")
-	private WebElement vendorManagementlnk;
+	private WebElement vendorManagementLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Vendor Registration']")
-	private WebElement vendorRegistrationlnk;
+	private WebElement vendorRegistrationLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Potential Vendor Screening']")
-	private WebElement potentialVendorScreeninglnk;
+	private WebElement potentialVendorScreeningLink;
 
 	@FindBy(xpath = "//p[normalize-space()='Vendor Management']")
-	private WebElement vendorMgntlnk;
+	private WebElement vendorMgntLink;
 
 	@FindBy(xpath = "//button[normalize-space()='Login']")
 	private WebElement loginbtn;
@@ -160,35 +162,35 @@ public class HomePage extends BaseClass {
 	private WebElement crossbtn;
 
 	@FindBy(xpath = "//h2[normalize-space()='MAHB Contact Directory']")
-	private WebElement mahbContactDirectorylnk;
+	private WebElement mahbContactDirectoryLink;
 
 	@FindBy(xpath = "//h2[normalize-space()='Procurehere Login']")
-	private WebElement procurehereLoginlnk;
+	private WebElement procurehereLoginLink;
 
 	@FindBy(xpath = "//h2[normalize-space()='Vendor Management System']")
-	private WebElement vendorManagementSystemlnk;
+	private WebElement vendorManagementSystemLink;
 
 	@FindBy(xpath = "//div[@class='me-4 link-footer d-flex align-items-center']/a")
 	private List<WebElement> links;
 
 	@FindBy(xpath = "//h3[text()='Welcome to MAGP']")
 	private WebElement welcomeToMagpTxt;
-	
+
 	@FindBy(xpath = "//a[text()='Purchase ID']")
 	private WebElement purchaseIDTxt;
-	
+
 	@FindBy(xpath = "//p[text()='Purchase login ID to access an expanded array of modules and features']")
 	private WebElement purchaseIDPopDescTxt;
-	
+
 	@FindBy(xpath = "//h2[text()='Latest Announcements']")
 	private WebElement latestAnnouncementsTxt;
-	
+
 	@FindBy(xpath = "//p[text()='Last 7 days']")
 	private WebElement last7daysTxt;
-	
+
 	@FindBy(xpath = "//img[@class='logo me-3']")
 	private WebElement malaysiaLogoIcon;
-	
+
 	@FindBy(xpath = "(//img[contains(@class,'logo-small')])[1]")
 	private WebElement magpLogoIcon;
 
@@ -288,124 +290,124 @@ public class HomePage extends BaseClass {
 		return viewAll;
 	}
 
-	public WebElement getIntroductionlnk() {
-		return introductionlnk;
+	public WebElement getIntroductionLink() {
+		return introductionLink;
 	}
 
-	public WebElement getPrefacelnk() {
-		return prefacelnk;
+	public WebElement getPrefaceLink() {
+		return prefaceLink;
 	}
 
-	public WebElement getProcurementCodesofEthicslnk() {
-		return procurementCodesofEthicslnk;
+	public WebElement getProcurementCodesofEthicsLink() {
+		return procurementCodesofEthicsLink;
 	}
 
-	public WebElement getGeneralProvisionlnk() {
-		return generalProvisionlnk;
+	public WebElement getGeneralProvisionLink() {
+		return generalProvisionLink;
 	}
 
-	public WebElement getTermsDefinitionslnk() {
-		return termsDefinitionslnk;
+	public WebElement getTermsDefinitionsLink() {
+		return termsDefinitionsLink;
 	}
 
-	public WebElement getProcessSymbolslnk() {
-		return processSymbolslnk;
+	public WebElement getProcessSymbolsLink() {
+		return processSymbolsLink;
 	}
 
-	public WebElement getmAHBsProcurementvaluechainlnk() {
-		return mAHBsProcurementvaluechainlnk;
+	public WebElement getmAHBsProcurementvaluechainLink() {
+		return mAHBsProcurementvaluechainLink;
 	}
 
 	public WebElement getContactUsbtn() {
 		return contactUsbtn;
 	}
 
-	public WebElement getProcurementplanninglnk() {
-		return procurementplanninglnk;
+	public WebElement getProcurementplanningLink() {
+		return procurementplanningLink;
 	}
 
-	public WebElement getBusinessCaselnk() {
-		return businessCaselnk;
+	public WebElement getBusinessCaseLink() {
+		return businessCaseLink;
 	}
 
-	public WebElement getAnnualProcurementPlanninglnk() {
-		return annualProcurementPlanninglnk;
+	public WebElement getAnnualProcurementPlanningLink() {
+		return annualProcurementPlanningLink;
 	}
 
-	public WebElement getStrategyPaperlnk() {
-		return strategyPaperlnk;
+	public WebElement getStrategyPaperLink() {
+		return strategyPaperLink;
 	}
 
-	public WebElement getRequisitionlnk() {
-		return requisitionlnk;
+	public WebElement getRequisitionLink() {
+		return requisitionLink;
 	}
 
-	public WebElement getPurchaseRequisitionlnk() {
-		return purchaseRequisitionlnk;
+	public WebElement getPurchaseRequisitionLink() {
+		return purchaseRequisitionLink;
 	}
 
-	public WebElement getProcessofPurchaseRequisitionlnk() {
-		return processofPurchaseRequisitionlnk;
+	public WebElement getProcessofPurchaseRequisitionLink() {
+		return processofPurchaseRequisitionLink;
 	}
 
-	public WebElement getSourcinglnk() {
-		return Sourcinglnk;
+	public WebElement getSourcingLink() {
+		return SourcingLink;
 	}
 
-	public WebElement getTenderManagementlnk() {
-		return tenderManagementlnk;
+	public WebElement getTenderManagementLink() {
+		return tenderManagementLink;
 	}
 
-	public WebElement getTenderAdministrationlnk() {
-		return tenderAdministrationlnk;
+	public WebElement getTenderAdministrationLink() {
+		return tenderAdministrationLink;
 	}
 
-	public WebElement getTenderEvaluationlnk() {
-		return tenderEvaluationlnk;
+	public WebElement getTenderEvaluationLink() {
+		return tenderEvaluationLink;
 	}
 
-	public WebElement getAbortofTenderlnk() {
-		return AbortofTenderlnk;
+	public WebElement getAbortofTenderLink() {
+		return AbortofTenderLink;
 	}
 
-	public WebElement getClarificationNegotiationpriortoAwardlnk() {
-		return clarificationNegotiationpriortoAwardlnk;
+	public WebElement getClarificationNegotiationpriortoAwardLink() {
+		return clarificationNegotiationpriortoAwardLink;
 	}
 
-	public WebElement getContractAdministrationlnk() {
-		return contractAdministrationlnk;
+	public WebElement getContractAdministrationLink() {
+		return contractAdministrationLink;
 	}
 
-	public WebElement getContractManagementImplementationlnk() {
-		return contractManagementImplementationlnk;
+	public WebElement getContractManagementImplementationLink() {
+		return contractManagementImplementationLink;
 	}
 
-	public WebElement getContractRenewallnk() {
-		return contractRenewallnk;
+	public WebElement getContractRenewalLink() {
+		return contractRenewalLink;
 	}
 
-	public WebElement getContractTerminationlnk() {
-		return contractTerminationlnk;
+	public WebElement getContractTerminationLink() {
+		return contractTerminationLink;
 	}
 
-	public WebElement getContractCloseoutlnk() {
-		return contractCloseoutlnk;
+	public WebElement getContractCloseoutLink() {
+		return contractCloseoutLink;
 	}
 
-	public WebElement getVendorManagementlnk() {
-		return vendorManagementlnk;
+	public WebElement getVendorManagementLink() {
+		return vendorManagementLink;
 	}
 
-	public WebElement getVendorRegistrationlnk() {
-		return vendorRegistrationlnk;
+	public WebElement getVendorRegistrationLink() {
+		return vendorRegistrationLink;
 	}
 
-	public WebElement getPotentialVendorScreeninglnk() {
-		return potentialVendorScreeninglnk;
+	public WebElement getPotentialVendorScreeningLink() {
+		return potentialVendorScreeningLink;
 	}
 
-	public WebElement getVendorMgntlnk() {
-		return vendorMgntlnk;
+	public WebElement getVendorMgntLink() {
+		return vendorMgntLink;
 	}
 
 	public WebElement getLoginbtn() {
@@ -416,16 +418,16 @@ public class HomePage extends BaseClass {
 		return crossbtn;
 	}
 
-	public WebElement getMahbContactDirectorylnk() {
-		return mahbContactDirectorylnk;
+	public WebElement getMahbContactDirectoryLink() {
+		return mahbContactDirectoryLink;
 	}
 
-	public WebElement getProcurehereLoginlnk() {
-		return procurehereLoginlnk;
+	public WebElement getProcurehereLoginLink() {
+		return procurehereLoginLink;
 	}
 
-	public WebElement getVendorManagementSystemlnk() {
-		return vendorManagementSystemlnk;
+	public WebElement getVendorManagementSystemLink() {
+		return vendorManagementSystemLink;
 	}
 
 	public void verifyWelcomeToMagpTxt() {
@@ -440,19 +442,19 @@ public class HomePage extends BaseClass {
 		elementClick(getCrossbtn());
 		Thread.sleep(3000);
 
-		scrollToElement(getMahbContactDirectorylnk());
+		scrollToElement(getMahbContactDirectoryLink());
 		Thread.sleep(1000);
 
 		String pWindow = getWindowHandle();
 
-		elementClick(getMahbContactDirectorylnk());
+		elementClick(getMahbContactDirectoryLink());
 		Thread.sleep(2000);
 
 		navigateBack();
-		elementClick(getCrossbtn());
+		popUpClose(getCrossbtn());
 		scrollPageToDown();
 
-		elementClick(getProcurehereLoginlnk());
+		elementClick(getProcurehereLoginLink());
 		Thread.sleep(2000);
 		Set<String> windows = getWindowHandles();
 
@@ -467,7 +469,7 @@ public class HomePage extends BaseClass {
 		}
 		closeWindow();
 		switchToWindow(pWindow);
-		elementClick(getVendorManagementSystemlnk());
+		elementClick(getVendorManagementSystemLink());
 		Thread.sleep(3000);
 		Set<String> handles = getWindowHandles();
 		for (String handle : handles) {
@@ -485,34 +487,37 @@ public class HomePage extends BaseClass {
 		quitWindow();
 
 	}
-	
+
 	public void verifyPurchaseIdTxt() {
 		String purchaseIdTxt = getPurchaseIDTxt().getText();
 		Assert.assertEquals(purchaseIdTxt, "Purchase ID");
 	}
-	
+
 	public void verifyPurchaseIdDescTxt() {
 		String purchaseIdDescTxt = getPurchaseIDTxt().getText();
 		Assert.assertEquals(purchaseIdDescTxt, "Purchase login ID to access an expanded array of modules and features");
 	}
-	
+
 	public void verifyLatestAnnouncementTxt() {
 		scrollToElement(getLast7daysTxt());
 		String latestAnnouncementTxt = getLatestAnnouncementsTxt().getText();
 		Assert.assertEquals(latestAnnouncementTxt, "Latest Announcements");
 	}
-	
+
 	public void verifyLast7DaysTxt() {
 		String last7DaysTxt = getLast7daysTxt().getText();
 		Assert.assertEquals(last7DaysTxt, "Last 7 days");
 	}
-	
+
 	public void verifyViewAll() {
 		scrollToElement(getViewAll());
 		String viewAllTxt = getViewAll().getText();
-		Assert.assertEquals(viewAllTxt, "View ALL");
+		Assert.assertEquals(viewAllTxt, "View All");
 	}
-	
 
+	public void clickOnIntroductionModule() {
+		popUpClose(getCrossbtn());
+		clickUsingJavaScript(getIntroduction());
+	}
 
 }

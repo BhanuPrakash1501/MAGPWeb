@@ -21,10 +21,6 @@ public class ForgetPasswordPage extends BaseClass {
 	@FindBy(xpath = "//button[text()='Send Link']")
 	private WebElement sendlinkbtn;
 
-	public WebElement getForgotPasswordTxt() {
-		return forgotPasswordTxt;
-	}
-
 	@FindBy(xpath = "//a[text()='Go Back to Login']")
 	private WebElement goBackLoginbtn;
 
@@ -42,6 +38,10 @@ public class ForgetPasswordPage extends BaseClass {
 
 	@FindBy(xpath = "//button[text()='Back To Login Page']")
 	private WebElement backToLoginBtn;
+
+	public WebElement getForgotPasswordTxt() {
+		return forgotPasswordTxt;
+	}
 
 	public WebElement getWellDoneTxt() {
 		return wellDoneTxt;

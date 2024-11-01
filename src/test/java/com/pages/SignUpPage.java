@@ -412,5 +412,6 @@ public class SignUpPage extends BaseClass {
 		elementClick(getLoginhereLink());
 
 	}
+	
 
 }

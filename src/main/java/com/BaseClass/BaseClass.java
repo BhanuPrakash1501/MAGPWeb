@@ -52,7 +52,6 @@ public class BaseClass {
 	public static void getDriver(String browser) {
 		switch (browser) {
 		case "chrome":
-
 			driver = new ChromeDriver();
 			break;
 		case "ie":
@@ -70,6 +69,7 @@ public class BaseClass {
 		default:
 			break;
 		}
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 	}
 
 	/**
@@ -468,7 +468,7 @@ public class BaseClass {
 
 	public static void scrollToElement(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);", element);
+		js.executeScript("arguments[0].scrollIntoView()", element);
 
 	}
 
@@ -515,6 +515,15 @@ public class BaseClass {
 	public String randomAlphaNumeric(int x, int y) {
 		String name = RandomStringUtils.randomAlphabetic(x);
 		String number = RandomStringUtils.randomNumeric(y);
-		return(name +number);
+		return (name + number);
+	}
+
+	public void clickUsingJavaScript(WebElement ele) {
+		WebElement element = ele;
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+	}
+
+	public void popUpClose(WebElement ele) {
+		elementClick(ele);
 	}
 }
